@@ -92,7 +92,6 @@ public class TcpSocketClient {
                                         mTcpSocketListener.callBackContent(content);
                                 }
                             }
-
                         }
                     }
 

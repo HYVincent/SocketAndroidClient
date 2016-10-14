@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
                             public void run() {
                                 if (showTv != null){
                                     showTv.setText(showTv.getText().toString() + content);
-                                    Log.d("连接状态：", "连接成功");
-                                    Toast.makeText(MyApplication.getApp(), "连接成功", Toast.LENGTH_LONG).show();
+//                                    Log.d("连接状态：", "连接成功");
+//                                    Toast.makeText(MyApplication.getApp(), "连接成功", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // 启动tcp套接字连接
                 mTcpSocketClient.startTcpSocketConnect();
+
             }
         });
     }
