@@ -1,5 +1,7 @@
 package com.vincent.socket;
 
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -21,9 +23,9 @@ import java.net.Socket;
 
 public class TcpSocketClient {
     // 服务端地址
-    private String serverIp = "192.168.0.166";
+    private String serverIp = ConfigInfo.SERVICE_IP;
     // 服务端端口号
-    private int serverPort = 8888;
+    private int serverPort = ConfigInfo.SERVICE_PORT;
     // 套接字
     private Socket mSocket = null;
     // 缓冲区读取
@@ -90,8 +92,10 @@ public class TcpSocketClient {
                                         mTcpSocketListener.callBackContent(content);
                                 }
                             }
+
                         }
                     }
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
